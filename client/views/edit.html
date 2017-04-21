@@ -1,0 +1,30 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Genre</th>
+      <th>Release Date</th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="movie in movies">
+      <td>{{movie.name}}</td>
+      <td>{{movie.genre}}</td>
+      <td>{{movie.date}}</td>
+      <td><button class="btn btn-danger" ng-click="DeleteMovie(movie)">Remove</button></td>
+    </tr>
+    <tr>
+      <form>
+        <td><div class="form-group">
+            <input type="text" placeholder="Name" class="form-control" ng-model="newMovie.name" />
+        </div></td>
+        <td><div class="form-group">
+            <input type="text" placeholder="Genre" class="form-control" ng-model="newMovie.genre"/>
+        </div></td>
+        <td><div class="form-group">
+            <input type="text" placeholder="Release Date" class="form-control" ng-model="newMovie.date" />
+        </div></td>
+        <td><button type="button" class="btn btn-success" ng-click=AddMovie()>Submit</button></td>
+      </form>
+    </tr>
+  </table>
+</div>
